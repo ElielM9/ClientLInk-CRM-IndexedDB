@@ -1,5 +1,5 @@
 /* Importacines */
-import { FORM } from "../utils/selectors";
+import { FORM } from "../utils/selectors.js";
 
 export function printAlert(message, type) {
   const ALERT = document.querySelector(`.alert`);

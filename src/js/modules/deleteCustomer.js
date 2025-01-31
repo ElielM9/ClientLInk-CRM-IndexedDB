@@ -2,9 +2,9 @@
 import { dataBase } from "../utils/variables.js";
 
 export function deleteCustomer(e) {
-  const reference = e.target.classList.contains(`delete`);
+  const reference = e.target.parentElement.classList.contains(`delete`);
   if (reference) {
-    const idDelete = Number(e.target.dataset.customer);
+    const idDelete = Number(e.target.parentElement.dataset.customer);
 
     const confirmation = confirm(`¿Deseas borrar este cliente?`);
 
@@ -18,7 +18,7 @@ export function deleteCustomer(e) {
         console.log(`Hola`);
 
         // Actualizar la lista de clientes
-        e.target.parentElement.parentElement.remove();
+        e.target.parentElement.parentElement.parentElement.remove();
       };
 
       transaction.onerror = () => {
